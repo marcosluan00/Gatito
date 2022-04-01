@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import Servicos from './src/pages/Servicos';
+import React from 'react'
+
+import Carrinho from './src/pages/Carrinho'
+import Routes from './src/routes';
+
+import 'intl'
+import 'intl/locale-data/jsonp/pt-BR'
+import TelaPadrao from './src/Components/TelaPadrao';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TelaPadrao>
+    <Routes/>
+    </TelaPadrao>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
